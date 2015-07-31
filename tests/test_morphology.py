@@ -14,6 +14,11 @@ class MorphologyApiTests(unittest.TestCase):
         self.api_client = src.ApiClient()
         self.morphology_api = src.MorphologyApi(self.api_client)
 
+    def test_morphology_supported_languages_get(self):
+        result = self.morphology_api.nlp_morphology_supported_languages_get()
+        self.assertIsNotNone(result)
+        print result.__repr__()
+
     def test_morphology_extract_lemma_get(self):
         lang = "en"
         input = "This is a test."
