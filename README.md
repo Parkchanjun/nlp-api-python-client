@@ -1,5 +1,5 @@
-# Systran Natural Language Processing Python SDK.
-This is a Python implementation of the [Systran Natural Language Processing](https://api-platform-stag.systran.net/reference/nlp) SDK.
+# Systran Natural Language Processing Python Client Library.
+This is a Python implementation of the [Systran Natural Language Processing](https://api-platform-stag.systran.net/reference/nlp) Client Library.
 
 ## Requirements.
 Python 2.7 and later.
