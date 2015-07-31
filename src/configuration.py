@@ -17,6 +17,31 @@ Copyright 2015 SYSTRAN Software, Inc. All rights reserved.
 from __future__ import absolute_import
 import base64
 import urllib3
+import sys
+
+def load_api_key(api_key_file):
+    try:
+        f = open(api_key_file, "r")
+        key = f.read().strip()
+        if key == '':
+            # The key file should't be blank
+            print('The api_key.txt file appears to be blank, please paste YOUR_API_KEY here')
+            sys.exit(0)
+        else:
+            # setup the key
+            global api_key
+            api_key["key"] = key
+
+        f.close()
+    except IOError:
+        # The file doesn't exist, so show the message and create the file.
+        print('API Key not found!')
+
+        # create a blank key file
+        open('api_key.txt', 'a').close()
+        sys.exit(0)
+    except Exception as e:
+        print(e)
 
 def get_api_key_with_prefix(key):
     global api_key
@@ -52,14 +77,13 @@ def auth_settings():
            }
 
 # Default Base url
-host = "https://platformapi-stag.systran.net:8904"
+host = "https://api-platform-stag.systran.net:8904"
 
 # Default api client
 api_client = None
              
 # Authentication settings
-# Replace xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx by your API_KEY
-api_key = {'key': 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx'}
+api_key = {}
 api_key_prefix = {}
 username = ''
 password = ''
