@@ -36,9 +36,16 @@ from .models.supported_language import SupportedLanguage
 from .models.supported_languages_response import SupportedLanguagesResponse
 from .models.supported_language_pair import SupportedLanguagePair
 from .models.transcription_supported_languages_response import TranscriptionSupportedLanguagesResponse
+from .models.pos_annotation import PosAnnotation
+from .models.morphology_extract_pos_response import MorphologyExtractPosResponse
+from .models.lemma_annotation import LemmaAnnotation
+from .models.morphology_extract_lemma_response import MorphologyExtractLemmaResponse
+from .models.chunk_annotation import ChunkAnnotation
+from .models.morphology_extract_np_response import MorphologyExtractNPResponse
 
 # import apis into sdk package
 from .apis.lid_api import LidApi
+from .apis.morphology_api import MorphologyApi
 from .apis.segmentation_api import SegmentationApi
 from .apis.transcription_api import TranscriptionApi
 from .apis.ner_api import NerApi

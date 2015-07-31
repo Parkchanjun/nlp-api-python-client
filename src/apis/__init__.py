@@ -18,6 +18,7 @@ from __future__ import absolute_import
 
 # import apis into api package
 from .lid_api import LidApi
+from .morphology_api import MorphologyApi
 from .segmentation_api import SegmentationApi
 from .transcription_api import TranscriptionApi
 from .ner_api import NerApi

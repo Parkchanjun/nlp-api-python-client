@@ -36,4 +36,10 @@ from .supported_language import SupportedLanguage
 from .supported_languages_response import SupportedLanguagesResponse
 from .supported_language_pair import SupportedLanguagePair
 from .transcription_supported_languages_response import TranscriptionSupportedLanguagesResponse
+from .pos_annotation import PosAnnotation
+from .morphology_extract_pos_response import MorphologyExtractPosResponse
+from .lemma_annotation import LemmaAnnotation
+from .morphology_extract_lemma_response import MorphologyExtractLemmaResponse
+from .chunk_annotation import ChunkAnnotation
+from .morphology_extract_np_response import MorphologyExtractNPResponse
 
