@@ -28,8 +28,8 @@ class TranscriptionSupportedLanguagesResponse(object):
         """
         Systran model
 
-        :param dict systranTypes: The key is attribute name and the value is attribute type.
-        :param dict attributeMap: The key is attribute name and the value is json key in definition.
+        :param dict systran_types: The key is attribute name and the value is attribute type.
+        :param dict attribute_map: The key is attribute name and the value is json key in definition.
         """
         self.systran_types = {
             'language_pairs': 'list[SupportedLanguagePair]'
@@ -46,7 +46,7 @@ class TranscriptionSupportedLanguagesResponse(object):
     def __repr__(self):
         properties = []
         for p in self.__dict__:
-            if p != 'systranTypes' and p != 'attributeMap':
+            if p != 'systran_types' and p != 'attribute_map':
                 properties.append('{prop}={val!r}'.format(prop=p, val=self.__dict__[p]))
 
         return '<{name} {props}>'.format(name=__name__, props=' '.join(properties))

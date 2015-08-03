@@ -83,6 +83,7 @@ host = "https://api-platform-stag.systran.net:8904"
 api_client = None
              
 # Authentication settings
+
 api_key = {}
 api_key_prefix = {}
 username = ''
