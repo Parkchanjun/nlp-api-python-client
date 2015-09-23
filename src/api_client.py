@@ -119,12 +119,7 @@ class ApiClient(object):
 
     # deserialize response data
     if response:
-      if "json" in response_data:
-        return self.deserialize(response_data["json"], response)
-      elif "content" in response_data:
-        return response_data["content"]
-      else:
-        return response_data
+      return self.deserialize(response_data, response)
     else:
       return None
 
