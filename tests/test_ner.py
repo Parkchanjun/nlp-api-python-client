@@ -4,15 +4,15 @@
 import os
 import unittest
 
-import src
-import src.configuration
+import systranNlpApi
+import systranNlpApi.configuration
 
 class NerApiTests(unittest.TestCase):
     def setUp(self):
         api_key_file = os.path.join(os.path.dirname(__file__), "../", "api_key.txt")
-        src.configuration.load_api_key(api_key_file)
-        self.api_client = src.ApiClient()
-        self.ner_api = src.NerApi(self.api_client)
+        systranNlpApi.configuration.load_api_key(api_key_file)
+        self.api_client = systranNlpApi.ApiClient()
+        self.ner_api = systranNlpApi.NerApi(self.api_client)
 
     def test_ner_extract_entity(self):
         lang = "en"

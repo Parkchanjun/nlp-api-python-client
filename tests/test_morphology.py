@@ -4,15 +4,15 @@
 import os
 import unittest
 
-import src
-import src.configuration
+import systranNlpApi
+import systranNlpApi.configuration
 
 class MorphologyApiTests(unittest.TestCase):
     def setUp(self):
         api_key_file = os.path.join(os.path.dirname(__file__), "../", "api_key.txt")
-        src.configuration.load_api_key(api_key_file)
-        self.api_client = src.ApiClient()
-        self.morphology_api = src.MorphologyApi(self.api_client)
+        systranNlpApi.configuration.load_api_key(api_key_file)
+        self.api_client = systranNlpApi.ApiClient()
+        self.morphology_api = systranNlpApi.MorphologyApi(self.api_client)
 
     def test_morphology_supported_languages_get(self):
         result = self.morphology_api.nlp_morphology_supported_languages_get()
